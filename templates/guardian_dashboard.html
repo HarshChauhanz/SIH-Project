@@ -5,22 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guardian Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <div class="flex h-screen">
-        <div class="w-64 bg-white shadow-md">
-            <div class="p-6">
-                <h1 class="text-2xl font-bold text-gray-800">Guardian Dashboard</h1>
+<body class="bg-gray-50 font-sans">
+    <div class="flex flex-col h-screen">
+        <header class="bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-semibold text-gray-800">Abhyudaya</h1>
+            <div class="flex items-center space-x-4">
+                 <span class="text-sm font-medium text-gray-600">
+                    <i class="fas fa-user-shield mr-2"></i>Guardian
+                </span>
+                <span class="text-sm font-medium text-gray-800">{{ user_name }}</span>
+                <a href="/logout" class="text-sm text-gray-600 hover:text-indigo-600" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
             </div>
-            <nav class="mt-6">
-                <a href="#" class="block px-6 py-2 text-gray-600 hover:bg-gray-200">Home</a>
-                <a href="#" class="block px-6 py-2 text-gray-600 hover:bg-gray-200">My Child's Progress</a>
-                <a href="/logout" class="block px-6 py-2 text-gray-600 hover:bg-gray-200">Logout</a>
-            </nav>
-        </div>
-        <div class="flex-1 p-10">
-            <h2 class="text-3xl font-bold">Welcome, Guardian!</h2>
-        </div>
+        </header>
+
+        <main class="flex-1 p-8 overflow-y-auto">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900">Guardian Dashboard</h2>
+                        <p class="text-gray-500 mt-1">Monitor your ward's academic progress and well-being.</p>
+                    </div>
+                    <button class="bg-indigo-600 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-indigo-700">
+                        Contact Counselor
+                    </button>
+                </div>
+                
+                <div class="mt-8 bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-between items-start">
+                         <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Priya Kumar</h3>
+                            <p class="text-sm text-gray-500">Semester 5 | Computer Science Engineering</p>
+                         </div>
+                         <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                            <i class="fas fa-exclamation-triangle mr-1"></i>At-Risk
+                         </span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 pt-6 border-t">
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">Attendance</p>
+                            <p class="text-3xl font-bold text-gray-800 mt-1">72%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">Average Marks</p>
+                            <p class="text-3xl font-bold text-gray-800 mt-1">68%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-sm text-gray-500">Well-being</p>
+                            <p class="text-3xl font-bold text-gray-800 mt-1">65%</p>
+                        </div>
+                    </div>
+                     <p class="text-xs text-right text-gray-400 mt-4">Last Updated: September 20, 2025</p>
+                </div>
+
+                <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-gray-800">Attendance Trend (Last 6 Months)</h3>
+                        <div class="mt-4 h-64 bg-gray-100 flex items-center justify-center rounded">
+                            <p class="text-gray-400">[Attendance Graph Placeholder]</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="font-semibold text-gray-800">Academic Performance</h3>
+                        <div class="mt-4 h-64 bg-gray-100 flex items-center justify-center rounded">
+                            <p class="text-gray-400">[Performance Graph Placeholder]</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
     </div>
 </body>
 </html>

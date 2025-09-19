@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,5 +26,193 @@
             </div>
         </div>
     </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhyudaya - Student Dropout Prediction System</title>
+    <link rel="stylesheet" href="/static/css/role_selection.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="logo">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                        <h1 class="logo-text">Abhyudaya</h1>
+                    </div>
+                    <p class="subtitle">Student Dropout Prediction System</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <svg class="hero-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 7l-10 10"/>
+                        <path d="M8 7l9 9"/>
+                    </svg>
+                    <h2 class="hero-title">Student Dropout Prediction System</h2>
+                    <p class="hero-description">
+                        An AI-powered platform that identifies students at risk of dropping out, enabling early intervention 
+                        and support to improve retention rates in educational institutions.
+                    </p>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="features-grid">
+                    <div class="feature">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 3v5h6"/>
+                            <path d="M21 12A9 9 0 0 0 6 5.3L3 8"/>
+                            <path d="M21 21v-5h-6"/>
+                            <path d="M3 12a9 9 0 0 0 15 6.7l3-2.7"/>
+                            <circle cx="12" cy="12" r="1"/>
+                        </svg>
+                        <h3 class="feature-title">Predictive Analytics</h3>
+                        <p class="feature-description">Advanced algorithms analyze student data to predict dropout risk</p>
+                    </div>
+                    <div class="feature">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <h3 class="feature-title">Multi-Role Support</h3>
+                        <p class="feature-description">Tailored dashboards for students, mentors, and guardians</p>
+                    </div>
+                    <div class="feature">
+                        <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                        <h3 class="feature-title">Early Intervention</h3>
+                        <p class="feature-description">Timely alerts and support mechanisms to prevent dropouts</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Roles Section -->
+        <section class="roles-section">
+            <div class="roles-content">
+                <div class="roles-header">
+                    <h3 class="roles-title">Choose Your Role</h3>
+                    <p class="roles-description">
+                        Select your role to access the appropriate dashboard and features
+                    </p>
+                </div>
+
+                <div class="roles-grid">
+                    <!-- Student Card -->
+                    <div class="role-card" onclick="handleRoleLogin('student')">
+                        <div class="card-header">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                                </svg>
+                            </div>
+                            <h4 class="card-title">Student</h4>
+                            <p class="card-description">Access your academic progress and receive personalized support</p>
+                        </div>
+                        <div class="card-content">
+                            <ul class="card-features">
+                                <li>• View academic performance</li>
+                                <li>• Track attendance records</li>
+                                <li>• Receive support recommendations</li>
+                                <li>• Access learning resources</li>
+                            </ul>
+                            <button class="card-button" onclick="handleRoleLogin('student')">
+                                Login as Student
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Mentor Card -->
+                    <div class="role-card" onclick="handleRoleLogin('mentor')">
+                        <div class="card-header">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="8.5" cy="7" r="4"/>
+                                    <path d="M20 8v6"/>
+                                    <path d="M23 11h-6"/>
+                                </svg>
+                            </div>
+                            <h4 class="card-title">Mentor</h4>
+                            <p class="card-description">Monitor students and provide guidance to at-risk individuals</p>
+                        </div>
+                        <div class="card-content">
+                            <ul class="card-features">
+                                <li>• Monitor student progress</li>
+                                <li>• Identify at-risk students</li>
+                                <li>• Create intervention plans</li>
+                                <li>• Track success metrics</li>
+                            </ul>
+                            <button class="card-button" onclick="handleRoleLogin('mentor')">
+                                Login as Mentor
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Guardian Card -->
+                    <div class="role-card" onclick="handleRoleLogin('guardian')">
+                        <div class="card-header">
+                            <div class="card-icon-wrapper">
+                                <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                                </svg>
+                            </div>
+                            <h4 class="card-title">Guardian</h4>
+                            <p class="card-description">Stay informed about your child's academic journey and progress</p>
+                        </div>
+                        <div class="card-content">
+                            <ul class="card-features">
+                                <li>• Monitor child's progress</li>
+                                <li>• Receive important alerts</li>
+                                <li>• Communicate with mentors</li>
+                                <li>• Access support resources</li>
+                            </ul>
+                            <button class="card-button" onclick="handleRoleLogin('guardian')">
+                                Login as Guardian
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2024 Abhyudaya - Student Dropout Prediction System. Empowering education through AI.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function handleRoleLogin(role) {
+            window.location.href = `/login?role=${role}`;
+        }
+    </script>
+
 </body>
 </html>
