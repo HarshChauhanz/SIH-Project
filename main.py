@@ -16,6 +16,10 @@ templates = Jinja2Templates(directory="templates")
 app.include_router(auth.router)
 app.include_router(user.router)
 
+@app.get("/", response_class=HTMLResponse)
+async def read_root(request: Request):
+    return templates.TemplateResponse("role_selection.html", {"request": request})
+
 @app.exception_handler(StarletteHTTPException)
 async def custom_404_handler(request: Request, exc: StarletteHTTPException):
     if exc.status_code == 404:
