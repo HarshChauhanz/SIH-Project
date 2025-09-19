@@ -6,20 +6,23 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0a0a0a;
+    /* New Independence Day themed background */
+    background: #0F2027; /* Fallback */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
     color: #ffffff;
     min-height: 100vh;
 }
 
 .container {
     min-height: 100vh;
-    background-color: #0a0a0a;
 }
 
 /* Header */
 .header {
-    border-bottom: 1px solid #262626;
-    background-color: #111111;
+    border-bottom: 1px solid rgba(255, 153, 51, 0.2); /* Subtle Saffron Border */
+    background-color: rgba(15, 32, 39, 0.8);
+    backdrop-filter: blur(10px);
 }
 
 .header-content {
@@ -46,7 +49,7 @@ body {
 .logo-icon {
     width: 32px;
     height: 32px;
-    color: #3b82f6;
+    color: #FF9933; /* Saffron Accent */
 }
 
 .logo-text {
@@ -63,7 +66,6 @@ body {
 /* Hero Section */
 .hero {
     padding: 4rem 0;
-    background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
 }
 
 .hero-content {
@@ -80,7 +82,7 @@ body {
 .hero-icon {
     width: 64px;
     height: 64px;
-    color: #3b82f6;
+    color: #FF9933;
     margin: 0 auto 1rem;
 }
 
@@ -115,7 +117,7 @@ body {
 .feature-icon {
     width: 48px;
     height: 48px;
-    color: #3b82f6;
+    color: #FF9933;
     margin: 0 auto 1rem;
 }
 
@@ -134,7 +136,6 @@ body {
 /* Roles Section */
 .roles-section {
     padding: 4rem 0;
-    background-color: #111111;
 }
 
 .roles-content {
@@ -170,7 +171,7 @@ body {
 
 /* Role Cards */
 .role-card {
-    background-color: #1a1a1a;
+    background-color: rgba(12, 26, 36, 0.7);
     border: 2px solid #262626;
     border-radius: 12px;
     padding: 1.5rem;
@@ -183,7 +184,7 @@ body {
 }
 
 .role-card:hover {
-    border-color: #3b82f6;
+    border-color: #FF9933; /* Saffron border on hover */
     transform: translateY(-2px);
 }
 
@@ -195,20 +196,20 @@ body {
 .card-icon-wrapper {
     margin: 0 auto 1rem;
     padding: 1rem;
-    background-color: rgba(59, 130, 246, 0.1);
+    background-color: rgba(255, 153, 51, 0.1);
     border-radius: 50%;
     width: fit-content;
     transition: background-color 0.3s ease;
 }
 
 .role-card:hover .card-icon-wrapper {
-    background-color: rgba(59, 130, 246, 0.2);
+    background-color: rgba(255, 153, 51, 0.2);
 }
 
 .card-icon {
     width: 48px;
     height: 48px;
-    color: #3b82f6;
+    color: #FF9933;
 }
 
 .card-title {
@@ -246,7 +247,7 @@ body {
 
 .card-button {
     width: 100%;
-    background-color: #3b82f6;
+    background-color: #FF9933;
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -259,13 +260,12 @@ body {
 }
 
 .card-button:hover {
-    background-color: #2563eb;
+    background-color: #e78a2e;
 }
 
 /* Footer */
 .footer {
     border-top: 1px solid #262626;
-    background-color: rgba(26, 26, 26, 0.3);
     padding: 2rem 0;
 }
 

@@ -10,7 +10,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #2196f3, #3f51b5);
+    /* New Independence Day themed background */
+    background: #0F2027; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding: 20px;
 }
 
@@ -20,20 +23,16 @@ body {
 }
 
 .signup-form {
-    background: white;
+    background: rgba(12, 26, 36, 0.8); /* Semi-transparent dark form */
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    transform: translateY(0);
-    transition: transform 0.3s ease;
-}
-
-.signup-form:hover {
-    transform: translateY(-5px);
+    border: 1px solid rgba(255, 153, 51, 0.3); /* Subtle saffron border */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
 h2 {
-    color: #333;
+    color: #ffffff; /* White text */
     text-align: center;
     margin-bottom: 30px;
     font-size: 28px;
@@ -44,14 +43,25 @@ h2 {
     margin-bottom: 30px;
 }
 
-.form-group input {
+.form-group input, .form-group select {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
     border: none;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #4b5563; /* Darker gray border */
     outline: none;
+    background: transparent;
+    color: #ffffff;
     transition: border-color 0.3s ease;
+}
+
+.form-group select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.5em top 50%;
 }
 
 .form-group label {
@@ -59,69 +69,50 @@ h2 {
     top: 10px;
     left: 0;
     font-size: 16px;
-    color: #666;
+    color: #9ca3af; /* Light gray label */
     pointer-events: none;
     transition: all 0.3s ease;
 }
 
 .form-group input:focus,
-.form-group input:valid {
-    border-bottom-color: #2196f3;
+.form-group input:valid,
+.form-group select:focus {
+    border-bottom-color: #FF9933; /* Saffron Accent */
 }
 
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label {
     top: -20px;
     font-size: 12px;
-    color: #2196f3;
+    color: #FF9933;
 }
 
 .signup-button {
     width: 100%;
     padding: 12px;
-    background: #2196f3;
+    background: #FF9933; /* Saffron button */
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .signup-button:hover {
-    background: #1976d2;
+    background: #e78a2e; /* Darker saffron on hover */
     transform: translateY(-2px);
-}
-
-.signup-button:active {
-    transform: translateY(0);
 }
 
 .login-link {
     text-align: center;
     margin-top: 20px;
-    color: #666;
+    color: #9ca3af;
 }
 
 .login-link a {
-    color: #2196f3;
+    color: #FF9933; /* Saffron link */
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.login-link a:hover {
-    color: #1976d2;
-    text-decoration: underline;
-}
-
-.form-group select {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    outline: none;
-    background-color: white;
-    color: #666;
 }
