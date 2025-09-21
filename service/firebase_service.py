@@ -9,7 +9,7 @@ load_dotenv()
 
 if not firebase_admin._apps:
     # Make sure the path to your service account key is correct
-    cred = credentials.Certificate("D:\Project\Hackaccino-main\serviceAccountKey.json")
+    cred = credentials.Certificate("D:\Project\SIH\serviceAccountKey.json")
     firebase_admin.initialize_app(cred)
 
 db = firestore.client()
@@ -114,7 +114,6 @@ async def verify_google_token(token: str):
 # import firebase_admin
 # from firebase_admin import auth
 # import requests
-
 
 # load_dotenv()
 
