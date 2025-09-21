@@ -115,7 +115,6 @@ async def verify_google_token(token: str):
 # from firebase_admin import auth
 # import requests
 
-
 # load_dotenv()
 
 # if not firebase_admin._apps:
